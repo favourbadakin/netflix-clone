@@ -19,13 +19,13 @@ Installation:
 
 `npm install`  
 
-To Run Test Suite:  
+To Run Build:  
 
-`npm test`  
+`npm run build`  
 
 To Start Server:
 
-`npm start`  
+`npm run dev`  
 
 To Visit App:
 
