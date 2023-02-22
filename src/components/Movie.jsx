@@ -3,8 +3,10 @@ import { FaHeart, FaRegHeart } from "react-icons/fa"
 import { UserAuth } from '../context/AuthContext'
 import { db } from '../firebase'
 import { arrayUnion, doc, updateDoc} from 'firebase/firestore'
+import { useNavigate } from 'react-router-dom'
 
 const Movie = ({item}) => {
+  const navigate = useNavigate()
   const { user } = UserAuth()
   const [saved, setSaved] = useState(false)
 const movieId = doc(db, 'users', `${user?.email}`)
@@ -21,6 +23,7 @@ if(user?.email) {
   })
 }else{
   alert('Please log in to save')
+  navigate('/signin')
 }
 }
 

@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -17,7 +16,8 @@ await signUp(email, password)
 navigate('/')
 }
 catch(error){
-    console.log(error)
+    //console.log(error)
+    alert(error)
 }
   }
   return (
