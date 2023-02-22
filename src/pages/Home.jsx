@@ -18,14 +18,16 @@ const Home = () => {
   return (
     <>
       {loading ? (
-        <ClipLoader
-          color={"#DC2626"}
-          loading={loading}
-          size={30}
-          className="my-[25vh] mx-[50vw]"
-          aria-label="Loading Spinner"
-          data-testid="loader"
-        />
+        <span className="grid place-items-center">
+          <ClipLoader
+            color={"#DC2626"}
+            loading={loading}
+            size={30}
+            className="my-[25vh]"
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </span>
       ) : (
         <div>
           <Main />
